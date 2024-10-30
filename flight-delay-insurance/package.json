@@ -1,0 +1,23 @@
+{
+    "name": "flight-delay-insurance",
+    "version": "1.0.0",
+    "description": "A smart contract for flight delay insurance on Ethereum.",
+    "main": "index.js",
+    "scripts": {
+      "test": "truffle test",
+      "migrate": "truffle migrate --network development",
+      "deploy": "node scripts/deploy.js"
+    },
+    "author": "Your Name",
+    "license": "MIT",
+    "dependencies": {
+      "@truffle/hdwallet-provider": "^2.0.0",
+      "web3": "^1.7.0"
+    },
+    "devDependencies": {
+      "truffle": "^5.8.0",
+      "chai": "^4.3.6",
+      "mocha": "^10.0.0"
+    }
+  }
+  
