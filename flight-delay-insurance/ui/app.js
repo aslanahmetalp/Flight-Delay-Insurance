@@ -1,8 +1,8 @@
-// Web3.js ile bağlantıyı sağlayın
+// Pair with Web3.js
 let web3;
 let contract;
-const contractAddress = "YOUR_CONTRACT_ADDRESS"; // Kontrat adresini buraya ekleyin
-const contractABI = /* Kontratın ABI’sini buraya ekleyin */
+const contractAddress = "YOUR_CONTRACT_ADDRESS"; // Add contract address here
+const contractABI = /* Add the API of the contract here */
 
 window.onload = async () => {
     if (window.ethereum) {
@@ -40,7 +40,7 @@ async function purchasePolicy() {
 async function reportDelay(policyId, delayDuration) {
     const accounts = await web3.eth.getAccounts();
     await contract.methods.reportDelay(policyId, delayDuration)
-        .send({ from: accounts[1] }); // Oracle hesabını kullanın
+        .send({ from: accounts[1] }); // Use Oracle account
 
     alert("Gecikme oracle tarafından onaylandı!");
 }
@@ -48,7 +48,7 @@ async function reportDelay(policyId, delayDuration) {
 async function executePayout(policyId) {
     const accounts = await web3.eth.getAccounts();
     await contract.methods.executePayout(policyId)
-        .send({ from: accounts[0] }); // Yönetici hesabını kullanın
+        .send({ from: accounts[0] }); // Use administrator account
 
     alert("Ödeme başarıyla gerçekleştirildi!");
 }
