@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Delay Insurance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Uçuş Gecikme Sigortası</h1>
+    <div id="app">
+        <button onclick="showBuyInsurance()">Sigorta Satın Al</button>
+        <button onclick="showPolicies()">Poliçelerim</button>
+    </div>
+
+    <div id="buy-insurance" style="display:none;">
+        <h2>Sigorta Satın Al</h2>
+        <label>Uçuş Numarası:</label>
+        <input type="text" id="flightNumber"><br>
+        <label>Gecikme Eşiği (dakika):</label>
+        <input type="number" id="delayThreshold"><br>
+        <label>Ödeme Miktarı (ETH):</label>
+        <input type="number" id="payoutAmount"><br>
+        <label>Prim Ücreti (ETH):</label>
+        <input type="number" id="premiumAmount"><br>
+        <button onclick="purchasePolicy()">Poliçe Satın Al</button>
+    </div>
+
+    <div id="policies" style="display:none;">
+        <h2>Poliçelerim</h2>
+        <div id="policy-list"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.3.5/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
